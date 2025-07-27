@@ -2,13 +2,15 @@ package org.example.BetterDesignApplication.DocumentEditor.Models;
 
 public class ImageElement implements DocumentElement{
 
+    private String image;
 
-    public String render(String element){
-        return element;
+    public ImageElement(String image){
+        this.image = image;
     }
 
-    public String addElementInDocument(String Image){
-        return Image;
+    public String render(){
+        return "Image: " + image + "\n";
     }
+    
 
 }

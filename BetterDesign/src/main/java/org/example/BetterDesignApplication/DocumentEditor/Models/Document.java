@@ -16,16 +16,15 @@ public class Document {
         elements = new ArrayList<>();
     }
 
-    void addElement(DocumentElement documentElement){
+    public void addElement(DocumentElement documentElement){
         elements.add(documentElement);
     }
 
-    String render(){
+    public String render(){
         String display = "";
         for(DocumentElement item : elements){
-            display += item.render(item.render("xyz"));
+            display = display + item.render();
         }
-
         return display;
     }
 

@@ -1,3 +1,2 @@
-momos
-ScreenShot.img
-GolGappe
+Hello World
+Image: Screenshot.png
