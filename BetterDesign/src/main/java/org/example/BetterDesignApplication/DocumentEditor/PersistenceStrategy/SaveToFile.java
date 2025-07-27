@@ -7,10 +7,14 @@ import java.io.IOException;
 public class SaveToFile implements Persistence{
 
     public void save(String render){
-        File file = new File("C://Users//subabbar//Desktop//LowLevelDesign//BetterDesign//src//main//resources//document.txt");
-
-        file.mkdirs();
         try {
+            File file = new File("C://Users//subabbar//Desktop//LowLevelDesign//BetterDesign//src//main//resources//document.txt");
+
+            File parentDir = file.getParentFile();
+            if (parentDir != null && !parentDir.exists()) {
+                parentDir.mkdirs(); // Creates parent directories if they don't exist
+            }
+
             FileWriter fileWriter = new FileWriter(file);
             fileWriter.write(render);
             fileWriter.close();

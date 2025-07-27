@@ -1,13 +1,15 @@
 package org.example.BetterDesignApplication.DocumentEditor.Models;
 
-public class TextElement {
+public class TextElement implements DocumentElement{
 
+    private String text;
 
-    public String render(String element){
-        return "Image: " + element + "\n";
+    public TextElement(String text){
+        this.text = text;
     }
 
-    public String addElementInDocument(String text){
-        return text;
+    public String render(){
+        return text + "\n";
     }
+
 }
